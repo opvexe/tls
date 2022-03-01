@@ -58,7 +58,7 @@ var versionsMap = map[string]uint16{
 	"1.3": tls.VersionTLS13,
 }
 
-func createTLSConfig(o tlsOptions) (out *tls.Config, err error) {
+func CreateTLSConfig(o tlsOptions) (out *tls.Config, err error) {
 	// load key pair
 	if o.Cert == "" {
 		return nil, errors.New("no TLS certificate specified")
